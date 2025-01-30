@@ -19,6 +19,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.203
       sum_l_meters: 31.488
       type: BEND
   BX12:
@@ -41,6 +42,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.203
       sum_l_meters: 34.137
       type: BEND
   BX13:
@@ -63,6 +65,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.203
       sum_l_meters: 35.171
       type: BEND
   BX14:
@@ -85,6 +88,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.203
       sum_l_meters: 37.82
       type: BEND
   CQ11:
@@ -107,6 +111,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.108
       sum_l_meters: 31.89
       type: QUAD
   CQ12:
@@ -129,6 +134,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.108
       sum_l_meters: 37.418
       type: QUAD
   Q21201:
@@ -151,6 +157,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.107
       sum_l_meters: 30.732
       type: QUAD
   Q21301:
@@ -173,6 +180,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.107
       sum_l_meters: 43.182
       type: QUAD
   QM11:
@@ -195,6 +203,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.108
       sum_l_meters: 31.204
       type: QUAD
   QM12:
@@ -217,6 +226,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.108
       sum_l_meters: 38.299
       type: QUAD
   QM13:
@@ -239,6 +249,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.108
       sum_l_meters: 38.97
       type: QUAD
   QM14:
@@ -261,6 +272,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.108
       sum_l_meters: 44.338
       type: QUAD
   QM15:
@@ -283,6 +295,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.108
       sum_l_meters: 44.903
       type: QUAD
   SQ13:
@@ -305,6 +318,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.16
       sum_l_meters: 35.615
       type: QUAD
   XC21191:
@@ -327,6 +341,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.0
       sum_l_meters: 30.056
       type: XCOR
   XC21275:
@@ -349,6 +364,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.0
       sum_l_meters: 39.325
       type: XCOR
   XC21302:
@@ -371,6 +387,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.0
       sum_l_meters: 42.229
       type: XCOR
   XC21325:
@@ -393,6 +410,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.0
       sum_l_meters: 44.618
       type: XCOR
   YC21192:
@@ -415,6 +433,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.0
       sum_l_meters: 30.056
       type: YCOR
   YC21276:
@@ -437,6 +456,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.0
       sum_l_meters: 39.325
       type: YCOR
   YC21303:
@@ -459,6 +479,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.0
       sum_l_meters: 42.575
       type: YCOR
   YC21325:
@@ -481,6 +502,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.0
       sum_l_meters: 44.618
       type: YCOR
 screens:
@@ -528,12 +550,13 @@ wires:
   WS11:
     controls_information:
       PVs:
-        uwireinner: WIRE:LI21:285:UWIREINNER
-        uwireouter: WIRE:LI21:285:UWIREOUTER
-        xwireinner: WIRE:LI21:285:XWIREINNER
-        xwireouter: WIRE:LI21:285:XWIREOUTER
-        ywireinner: WIRE:LI21:285:YWIREINNER
-        ywireouter: WIRE:LI21:285:YWIREOUTER
+        temperature: WIRE:LI21:285:TEMP
+        u_wire_inner: WIRE:LI21:285:UWIREINNER
+        u_wire_outer: WIRE:LI21:285:UWIREOUTER
+        x_wire_inner: WIRE:LI21:285:XWIREINNER
+        x_wire_outer: WIRE:LI21:285:XWIREOUTER
+        y_wire_inner: WIRE:LI21:285:YWIREINNER
+        y_wire_outer: WIRE:LI21:285:YWIREOUTER
       control_name: WIRE:LI21:285
     metadata:
       area: BC1
@@ -549,12 +572,13 @@ wires:
   WS12:
     controls_information:
       PVs:
-        uwireinner: WIRE:LI21:293:UWIREINNER
-        uwireouter: WIRE:LI21:293:UWIREOUTER
-        xwireinner: WIRE:LI21:293:XWIREINNER
-        xwireouter: WIRE:LI21:293:XWIREOUTER
-        ywireinner: WIRE:LI21:293:YWIREINNER
-        ywireouter: WIRE:LI21:293:YWIREOUTER
+        temperature: WIRE:LI21:293:TEMP
+        u_wire_inner: WIRE:LI21:293:UWIREINNER
+        u_wire_outer: WIRE:LI21:293:UWIREOUTER
+        x_wire_inner: WIRE:LI21:293:XWIREINNER
+        x_wire_outer: WIRE:LI21:293:XWIREOUTER
+        y_wire_inner: WIRE:LI21:293:YWIREINNER
+        y_wire_outer: WIRE:LI21:293:YWIREOUTER
       control_name: WIRE:LI21:293
     metadata:
       area: BC1
@@ -570,26 +594,33 @@ wires:
   WS13:
     controls_information:
       PVs:
+        abort_scan: WIRE:LI21:301:MOTR.STOP
         enabled: WIRE:LI21:301:MOTR_ENABLED_STS
         homed: WIRE:LI21:301:MOTR_HOMED_STS
         initialize: WIRE:LI21:301:MOTR_INIT
-        initialized: WIRE:LI21:301:MOTR_INIT_STS
-        motr: WIRE:LI21:301:MOTR
+        initialize_status: WIRE:LI21:301:MOTR_INIT_STS
+        motor: WIRE:LI21:301:MOTR
+        position: WIRE:LI21:301:MOTR.RBV
         retract: WIRE:LI21:301:MOTR_RETRACT
-        startscan: WIRE:LI21:301:STARTSCAN
+        scan_pulses: WIRE:LI21:301:SCANPULSES
+        speed: WIRE:LI21:301:MOTR.VELO
+        speed_max: WIRE:LI21:301:MOTR.VMAX
+        speed_min: WIRE:LI21:301:MOTR.VBAS
+        start_scan: WIRE:LI21:301:STARTSCAN
+        temperature: WIRE:LI21:301:TEMP
         timeout: WIRE:LI21:301:MOTR_TIMEOUTEN
-        useuwire: WIRE:LI21:301:USEUWIRE
-        usexwire: WIRE:LI21:301:USEXWIRE
-        useywire: WIRE:LI21:301:USEYWIRE
-        usize: WIRE:LI21:301:UWIRESIZE
-        uwireinner: WIRE:LI21:301:UWIREINNER
-        uwireouter: WIRE:LI21:301:UWIREOUTER
-        xsize: WIRE:LI21:301:XWIRESIZE
-        xwireinner: WIRE:LI21:301:XWIREINNER
-        xwireouter: WIRE:LI21:301:XWIREOUTER
-        ysize: WIRE:LI21:301:YWIRESIZE
-        ywireinner: WIRE:LI21:301:YWIREINNER
-        ywireouter: WIRE:LI21:301:YWIREOUTER
+        u_size: WIRE:LI21:301:UWIRESIZE
+        u_wire_inner: WIRE:LI21:301:UWIREINNER
+        u_wire_outer: WIRE:LI21:301:UWIREOUTER
+        use_u_wire: WIRE:LI21:301:USEUWIRE
+        use_x_wire: WIRE:LI21:301:USEXWIRE
+        use_y_wire: WIRE:LI21:301:USEYWIRE
+        x_size: WIRE:LI21:301:XWIRESIZE
+        x_wire_inner: WIRE:LI21:301:XWIREINNER
+        x_wire_outer: WIRE:LI21:301:XWIREOUTER
+        y_size: WIRE:LI21:301:YWIRESIZE
+        y_wire_inner: WIRE:LI21:301:YWIREINNER
+        y_wire_outer: WIRE:LI21:301:YWIREOUTER
       control_name: WIRE:LI21:301
     metadata:
       area: BC1

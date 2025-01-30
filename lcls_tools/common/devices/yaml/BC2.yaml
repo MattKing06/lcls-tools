@@ -19,6 +19,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.549
       sum_l_meters: 398.987
       type: BEND
   BX22:
@@ -41,6 +42,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.549
       sum_l_meters: 409.403
       type: BEND
   BX23:
@@ -63,6 +65,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.549
       sum_l_meters: 411.045
       type: BEND
   BX24:
@@ -85,6 +88,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.549
       sum_l_meters: 421.461
       type: BEND
   CQ21:
@@ -107,6 +111,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.108
       sum_l_meters: 401.272
       type: QUAD
   CQ22:
@@ -129,6 +134,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.108
       sum_l_meters: 419.175
       type: QUAD
   Q24701A:
@@ -151,6 +157,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.107
       sum_l_meters: 396.107
       type: QUAD
   Q24701B:
@@ -173,6 +180,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.107
       sum_l_meters: 396.34
       type: QUAD
   Q24901A:
@@ -195,6 +203,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.107
       sum_l_meters: 423.308
       type: QUAD
   Q24901B:
@@ -217,6 +226,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.107
       sum_l_meters: 423.521
       type: QUAD
   QM21:
@@ -239,6 +249,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.461
       sum_l_meters: 398.147
       type: QUAD
   QM22:
@@ -261,6 +272,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - CU_SXR
+      l_eff: 0.461
       sum_l_meters: 422.646
       type: QUAD
 screens:
@@ -288,19 +300,25 @@ wires:
   WS24:
     controls_information:
       PVs:
+        abort_scan: WIRE:LI24:705:MOTR.STOP
         enabled: WIRE:LI24:705:MOTR_ENABLED_STS
-        initialized: WIRE:LI24:705:MOTR_INIT_STS
-        motr: WIRE:LI24:705:MOTR
-        startscan: WIRE:LI24:705:STARTSCAN
-        useuwire: WIRE:LI24:705:USEUWIRE
-        usexwire: WIRE:LI24:705:USEXWIRE
-        useywire: WIRE:LI24:705:USEYWIRE
-        uwireinner: WIRE:LI24:705:UWIREINNER
-        uwireouter: WIRE:LI24:705:UWIREOUTER
-        xwireinner: WIRE:LI24:705:XWIREINNER
-        xwireouter: WIRE:LI24:705:XWIREOUTER
-        ywireinner: WIRE:LI24:705:YWIREINNER
-        ywireouter: WIRE:LI24:705:YWIREOUTER
+        initialize_status: WIRE:LI24:705:MOTR_INIT_STS
+        motor: WIRE:LI24:705:MOTR
+        position: WIRE:LI24:705:MOTR.RBV
+        scan_pulses: WIRE:LI24:705:SCANPULSES
+        speed: WIRE:LI24:705:MOTR.VELO
+        speed_max: WIRE:LI24:705:MOTR.VMAX
+        speed_min: WIRE:LI24:705:MOTR.VBAS
+        start_scan: WIRE:LI24:705:STARTSCAN
+        u_wire_inner: WIRE:LI24:705:UWIREINNER
+        u_wire_outer: WIRE:LI24:705:UWIREOUTER
+        use_u_wire: WIRE:LI24:705:USEUWIRE
+        use_x_wire: WIRE:LI24:705:USEXWIRE
+        use_y_wire: WIRE:LI24:705:USEYWIRE
+        x_wire_inner: WIRE:LI24:705:XWIREINNER
+        x_wire_outer: WIRE:LI24:705:XWIREOUTER
+        y_wire_inner: WIRE:LI24:705:YWIREINNER
+        y_wire_outer: WIRE:LI24:705:YWIREOUTER
       control_name: WIRE:LI24:705
     metadata:
       area: BC2

@@ -1,4 +1,6 @@
 from abc import ABC, abstractmethod
+from typing import Optional
+
 import numpy as np
 
 from pydantic import BaseModel, ConfigDict
@@ -20,17 +22,13 @@ class ModelParameters(BaseModel):
     @property
     def bounds(self):
         return np.vstack(
-            [
-                np.array(parameter.bounds)
-                for parameter in self.parameters.values()
-            ]
+            [np.array(parameter.bounds) for parameter in self.parameters.values()]
         )
 
     @property
     def initial_values(self):
         return np.array(
-            [parameter.initial_value
-                for parameter in self.parameters.values()]
+            [parameter.initial_value for parameter in self.parameters.values()]
         )
 
     @initial_values.setter
@@ -52,7 +50,8 @@ class ModelParameters(BaseModel):
 
 # TODO: define properties
 
-class MethodBase(ABC):
+
+class MethodBase(ABC, BaseModel):
     """
     Base abstract class for all fit methods, which serves as the bare minimum
     skeleton code needed. Should be used only as a parent class to all method
@@ -66,7 +65,9 @@ class MethodBase(ABC):
         and upper bound on for acceptable values of each parameter)
     """
 
-    parameters: ModelParameters = None
+    parameters: ModelParameters
+    use_priors: Optional[bool] = False
+    fitted_params_dict: Optional[dict] = None
 
     @abstractmethod
     def find_init_values(self) -> list:
@@ -105,8 +106,7 @@ class MethodBase(ABC):
     def _log_prior(self, params: np.ndarray):
         ...
 
-    def log_likelihood(self, x: np.ndarray, y: np.ndarray,
-                       method_parameter_dict: dict):
+    def log_likelihood(self, x: np.ndarray, y: np.ndarray, method_parameter_dict: dict):
         method_parameter_list = np.array(
             [
                 method_parameter_dict[parameter_name]
@@ -125,10 +125,9 @@ class MethodBase(ABC):
         method_parameter_list: np.ndarray,
         x: np.ndarray,
         y: np.ndarray,
-        use_priors: bool = False,
     ):
         loss_temp = -self._log_likelihood(x, y, method_parameter_list)
-        if use_priors:
+        if self.use_priors:
             loss_temp = loss_temp - self._log_prior(method_parameter_list)
         return loss_temp
 

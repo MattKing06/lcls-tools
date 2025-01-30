@@ -21,6 +21,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.108
       sum_l_meters: 368.187
       type: QUAD
   QE202:
@@ -45,6 +46,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.108
       sum_l_meters: 373.201
       type: QUAD
   QE203:
@@ -69,6 +71,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.108
       sum_l_meters: 392.11
       type: QUAD
   QE204:
@@ -93,6 +96,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.108
       sum_l_meters: 395.218
       type: QUAD
   XCE202:
@@ -117,6 +121,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.0
       sum_l_meters: 373.577
       type: XCOR
   XCE204:
@@ -141,6 +146,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.0
       sum_l_meters: 395.594
       type: XCOR
   YCE201:
@@ -165,6 +171,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.0
       sum_l_meters: 368.562
       type: YCOR
   YCE203:
@@ -189,32 +196,40 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.0
       sum_l_meters: 392.485
       type: YCOR
 wires:
   WSEMIT2:
     controls_information:
       PVs:
+        abort_scan: WIRE:EMIT2:600:MOTR.STOP
         enabled: WIRE:EMIT2:600:MOTR_ENABLED_STS
         homed: WIRE:EMIT2:600:MOTR_HOMED_STS
         initialize: WIRE:EMIT2:600:MOTR_INIT
-        initialized: WIRE:EMIT2:600:MOTR_INIT_STS
-        motr: WIRE:EMIT2:600:MOTR
+        initialize_status: WIRE:EMIT2:600:MOTR_INIT_STS
+        motor: WIRE:EMIT2:600:MOTR
+        position: WIRE:EMIT2:600:MOTR.RBV
         retract: WIRE:EMIT2:600:MOTR_RETRACT
-        startscan: WIRE:EMIT2:600:STARTSCAN
+        scan_pulses: WIRE:EMIT2:600:SCANPULSES
+        speed: WIRE:EMIT2:600:MOTR.VELO
+        speed_max: WIRE:EMIT2:600:MOTR.VMAX
+        speed_min: WIRE:EMIT2:600:MOTR.VBAS
+        start_scan: WIRE:EMIT2:600:STARTSCAN
+        temperature: WIRE:EMIT2:600:TEMP
         timeout: WIRE:EMIT2:600:MOTR_TIMEOUTEN
-        useuwire: WIRE:EMIT2:600:USEUWIRE
-        usexwire: WIRE:EMIT2:600:USEXWIRE
-        useywire: WIRE:EMIT2:600:USEYWIRE
-        usize: WIRE:EMIT2:600:UWIRESIZE
-        uwireinner: WIRE:EMIT2:600:UWIREINNER
-        uwireouter: WIRE:EMIT2:600:UWIREOUTER
-        xsize: WIRE:EMIT2:600:XWIRESIZE
-        xwireinner: WIRE:EMIT2:600:XWIREINNER
-        xwireouter: WIRE:EMIT2:600:XWIREOUTER
-        ysize: WIRE:EMIT2:600:YWIRESIZE
-        ywireinner: WIRE:EMIT2:600:YWIREINNER
-        ywireouter: WIRE:EMIT2:600:YWIREOUTER
+        u_size: WIRE:EMIT2:600:UWIRESIZE
+        u_wire_inner: WIRE:EMIT2:600:UWIREINNER
+        u_wire_outer: WIRE:EMIT2:600:UWIREOUTER
+        use_u_wire: WIRE:EMIT2:600:USEUWIRE
+        use_x_wire: WIRE:EMIT2:600:USEXWIRE
+        use_y_wire: WIRE:EMIT2:600:USEYWIRE
+        x_size: WIRE:EMIT2:600:XWIRESIZE
+        x_wire_inner: WIRE:EMIT2:600:XWIREINNER
+        x_wire_outer: WIRE:EMIT2:600:XWIREOUTER
+        y_size: WIRE:EMIT2:600:YWIRESIZE
+        y_wire_inner: WIRE:EMIT2:600:YWIREINNER
+        y_wire_outer: WIRE:EMIT2:600:YWIREOUTER
       control_name: WIRE:EMIT2:600
     metadata:
       area: EMIT2

@@ -5,11 +5,11 @@ from pydantic import ValidationError
 from lcls_tools.common.devices.screen import Screen, ScreenCollection
 from lcls_tools.common.devices.magnet import Magnet, MagnetCollection
 from lcls_tools.common.devices.wire import Wire, WireCollection
+from lcls_tools.common.devices.lblm import LBLM, LBLMCollection
 from lcls_tools.common.devices.area import Area
 from lcls_tools.common.devices.beampath import Beampath
 
-
-DEFAULT_YAML_LOCATION = "./lcls_tools/common/devices/yaml/"
+DEFAULT_YAML_LOCATION = os.path.join(os.path.dirname(__file__), "yaml/")
 
 
 def _find_yaml_file(
@@ -122,6 +122,24 @@ def create_wire(
             return None
     else:
         return WireCollection(**device_data)
+
+
+def create_lblm(
+    area: str = None, name: str = None
+) -> Union[None, LBLM, LBLMCollection]:
+    device_data = _device_data(area=area, device_type="lblms", name=name)
+    if not device_data:
+        return None
+    if name:
+        try:
+            # this data is not available from YAML directly in this form, so we add it here.
+            device_data.update({"name": name})
+            return LBLM(**device_data)
+        except ValidationError as field_error:
+            print(field_error)
+            return None
+    else:
+        return LBLMCollection(**device_data)
 
 
 def create_area(area: str = None) -> Union[None, Area]:

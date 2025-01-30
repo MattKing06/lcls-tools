@@ -1,3 +1,29 @@
+lblms:
+  LBLM03A:
+    controls_information:
+      PVs:
+        bypass: LBLM:L1B:H282:A:FAST_AMP_BYP
+        gain: LBLM:L1B:H282:A:FAST_AMP_GAIN
+        gated_integral: LBLM:L1B:H282:A:GATED_INTEGRAL
+        i0_loss: LBLM:L1B:H282:A:I0_LOSS
+      control_name: LBLM:L1B:H282:A
+    metadata:
+      area: L1B
+      beam_path: []
+      sum_l_meters: null
+      type: LBLM
+  LBLM03B:
+    controls_information:
+      PVs:
+        bypass: LBLM:L1B:H282:B:FAST_AMP_BYP
+        gain: LBLM:L1B:H282:B:FAST_AMP_GAIN
+        i0_loss: LBLM:L1B:H282:B:I0_LOSS
+      control_name: LBLM:L1B:H282:B
+    metadata:
+      area: L1B
+      beam_path: []
+      sum_l_meters: null
+      type: LBLM
 magnets:
   QCM02:
     controls_information:
@@ -21,6 +47,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.23
       sum_l_meters: 100.213
       type: QUAD
   QCM03:
@@ -45,6 +72,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.23
       sum_l_meters: 112.434
       type: QUAD
   XCM02:
@@ -69,6 +97,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.0
       sum_l_meters: 100.213
       type: XCOR
   XCM03:
@@ -93,6 +122,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.0
       sum_l_meters: 112.434
       type: XCOR
   YCM02:
@@ -117,6 +147,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.0
       sum_l_meters: 100.213
       type: YCOR
   YCM03:
@@ -141,5 +172,6 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.0
       sum_l_meters: 112.434
       type: YCOR

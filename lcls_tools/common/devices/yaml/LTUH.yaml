@@ -1,3 +1,73 @@
+lblms:
+  LBLM30A:
+    controls_information:
+      PVs:
+        bypass: LBLM:LTUH:433:A:FAST_AMP_BYP
+        gain: LBLM:LTUH:433:A:FAST_AMP_GAIN
+        gated_integral: LBLM:LTUH:433:A:GATED_INTEGRAL
+      control_name: LBLM:LTUH:433:A
+    metadata:
+      area: LTUH
+      beam_path: []
+      sum_l_meters: null
+      type: LBLM
+  LBLM30B:
+    controls_information:
+      PVs:
+        bypass: LBLM:LTUH:433:B:FAST_AMP_BYP
+        gain: LBLM:LTUH:433:B:FAST_AMP_GAIN
+      control_name: LBLM:LTUH:433:B
+    metadata:
+      area: LTUH
+      beam_path: []
+      sum_l_meters: null
+      type: LBLM
+  LBLM32A:
+    controls_information:
+      PVs:
+        bypass: LBLM:LTUH:738:A:FAST_AMP_BYP
+        gain: LBLM:LTUH:738:A:FAST_AMP_GAIN
+        gated_integral: LBLM:LTUH:738:A:GATED_INTEGRAL
+      control_name: LBLM:LTUH:738:A
+    metadata:
+      area: LTUH
+      beam_path: []
+      sum_l_meters: null
+      type: LBLM
+  LBLM32B:
+    controls_information:
+      PVs:
+        bypass: LBLM:LTUH:738:B:FAST_AMP_BYP
+        gain: LBLM:LTUH:738:B:FAST_AMP_GAIN
+      control_name: LBLM:LTUH:738:B
+    metadata:
+      area: LTUH
+      beam_path: []
+      sum_l_meters: null
+      type: LBLM
+  LBLM34A:
+    controls_information:
+      PVs:
+        bypass: LBLM:LTUH:846:A:FAST_AMP_BYP
+        gain: LBLM:LTUH:846:A:FAST_AMP_GAIN
+      control_name: LBLM:LTUH:846:A
+    metadata:
+      area: LTUH
+      beam_path: []
+      sum_l_meters: null
+      type: LBLM
+  LBLMS26B:
+    controls_information:
+      PVs:
+        bypass: LBLM:LTUH:105:B:FAST_AMP_BYP
+        gain: LBLM:LTUH:105:B:FAST_AMP_GAIN
+        gated_integral: LBLM:LTUH:105:B:GATED_INTEGRAL
+      control_name: LBLM:LTUH:105:B
+    metadata:
+      area: LTUH
+      beam_path: []
+      sum_l_meters: null
+      type: LBLM
 magnets:
   BCX321:
     controls_information:
@@ -18,6 +88,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.35
       sum_l_meters: 1278.025
       type: BEND
   BCX322:
@@ -39,6 +110,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.35
       sum_l_meters: 1278.575
       type: BEND
   BCX323:
@@ -60,6 +132,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.35
       sum_l_meters: 1279.125
       type: BEND
   BCX324:
@@ -81,6 +154,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.35
       sum_l_meters: 1279.675
       type: BEND
   BCX351:
@@ -102,6 +176,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.35
       sum_l_meters: 1305.538
       type: BEND
   BCX352:
@@ -123,6 +198,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.35
       sum_l_meters: 1306.088
       type: BEND
   BCX353:
@@ -144,6 +220,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.35
       sum_l_meters: 1306.638
       type: BEND
   BCX354:
@@ -165,6 +242,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.35
       sum_l_meters: 1307.188
       type: BEND
   BCX361:
@@ -186,6 +264,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.35
       sum_l_meters: 1348.502
       type: BEND
   BCX362:
@@ -207,6 +286,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.35
       sum_l_meters: 1349.052
       type: BEND
   BCX363:
@@ -228,6 +308,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.35
       sum_l_meters: 1349.602
       type: BEND
   BCX364:
@@ -249,6 +330,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.35
       sum_l_meters: 1350.152
       type: BEND
   BX31:
@@ -270,6 +352,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 2.623
       sum_l_meters: 1241.935
       type: BEND
   BX32:
@@ -291,6 +374,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 2.623
       sum_l_meters: 1270.74
       type: BEND
   BX35:
@@ -312,6 +396,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 2.623
       sum_l_meters: 1313.557
       type: BEND
   BX36:
@@ -333,6 +418,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 2.623
       sum_l_meters: 1342.363
       type: BEND
   BY1:
@@ -354,6 +440,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 1.025
       sum_l_meters: 1212.531
       type: BEND
   BY2:
@@ -375,6 +462,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 1.025
       sum_l_meters: 1237.689
       type: BEND
   BYKIK1:
@@ -396,6 +484,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 1.06
       sum_l_meters: 1284.878
       type: BEND
   BYKIK2:
@@ -417,6 +506,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 1.06
       sum_l_meters: 1286.097
       type: BEND
   CQ31:
@@ -438,6 +528,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.108
       sum_l_meters: 1320.96
       type: QUAD
   CQ32:
@@ -459,6 +550,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.108
       sum_l_meters: 1334.96
       type: QUAD
   QDL31:
@@ -480,6 +572,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.32
       sum_l_meters: 1256.338
       type: QUAD
   QDL32:
@@ -501,6 +594,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.32
       sum_l_meters: 1292.149
       type: QUAD
   QDL33:
@@ -522,6 +616,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.32
       sum_l_meters: 1327.96
       type: QUAD
   QDL34:
@@ -543,6 +638,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.32
       sum_l_meters: 1363.771
       type: QUAD
   QE31:
@@ -564,6 +660,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.108
       sum_l_meters: 1418.528
       type: QUAD
   QE32:
@@ -585,6 +682,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.108
       sum_l_meters: 1436.159
       type: QUAD
   QE33:
@@ -606,6 +704,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.108
       sum_l_meters: 1453.791
       type: QUAD
   QE34:
@@ -627,6 +726,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.108
       sum_l_meters: 1471.423
       type: QUAD
   QE35:
@@ -648,6 +748,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.108
       sum_l_meters: 1489.055
       type: QUAD
   QE36:
@@ -669,6 +770,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.108
       sum_l_meters: 1506.686
       type: QUAD
   QEM1:
@@ -690,6 +792,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.32
       sum_l_meters: 1386.099
       type: QUAD
   QEM2:
@@ -711,6 +814,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.32
       sum_l_meters: 1390.56
       type: QUAD
   QEM3:
@@ -732,6 +836,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.32
       sum_l_meters: 1403.02
       type: QUAD
   QEM3V:
@@ -753,6 +858,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.108
       sum_l_meters: 1404.008
       type: QUAD
   QEM4:
@@ -774,6 +880,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.32
       sum_l_meters: 1407.481
       type: QUAD
   QT11:
@@ -795,6 +902,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1272.782
       type: QUAD
   QT12:
@@ -816,6 +924,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1274.243
       type: QUAD
   QT13:
@@ -837,6 +946,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1275.704
       type: QUAD
   QT21:
@@ -858,6 +968,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1308.594
       type: QUAD
   QT22:
@@ -879,6 +990,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1310.054
       type: QUAD
   QT23:
@@ -900,6 +1012,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1311.515
       type: QUAD
   QT31:
@@ -921,6 +1034,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1344.405
       type: QUAD
   QT32:
@@ -942,6 +1056,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1345.866
       type: QUAD
   QT33:
@@ -963,6 +1078,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1347.327
       type: QUAD
   QT41:
@@ -984,6 +1100,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1380.216
       type: QUAD
   QT42:
@@ -1005,6 +1122,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1381.677
       type: QUAD
   QT43:
@@ -1026,6 +1144,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1383.138
       type: QUAD
   QUM1:
@@ -1047,6 +1166,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.32
       sum_l_meters: 1521.483
       type: QUAD
   QUM2:
@@ -1068,6 +1188,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.32
       sum_l_meters: 1528.194
       type: QUAD
   QUM3:
@@ -1089,6 +1210,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.32
       sum_l_meters: 1536.655
       type: QUAD
   QUM4:
@@ -1110,6 +1232,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.32
       sum_l_meters: 1541.116
       type: QUAD
   QVB1:
@@ -1131,6 +1254,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1220.649
       type: QUAD
   QVB2:
@@ -1152,6 +1276,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1225.11
       type: QUAD
   QVB3:
@@ -1173,6 +1298,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1229.571
       type: QUAD
   QVM1:
@@ -1194,6 +1320,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1210.328
       type: QUAD
   QVM2:
@@ -1215,6 +1342,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1211.288
       type: QUAD
   QVM3:
@@ -1236,6 +1364,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1238.932
       type: QUAD
   QVM4:
@@ -1257,6 +1386,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.461
       sum_l_meters: 1239.893
       type: QUAD
   XCDL1:
@@ -1278,6 +1408,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1255.617
       type: XCOR
   XCDL2:
@@ -1299,6 +1430,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1291.518
       type: XCOR
   XCDL3:
@@ -1320,6 +1452,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1327.41
       type: XCOR
   XCDL4:
@@ -1341,6 +1474,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1367.05
       type: XCOR
   XCE31:
@@ -1362,6 +1496,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1418.048
       type: XCOR
   XCE33:
@@ -1383,6 +1518,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1453.281
       type: XCOR
   XCE35:
@@ -1404,6 +1540,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1488.395
       type: XCOR
   XCEM2:
@@ -1425,6 +1562,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1391.22
       type: XCOR
   XCEM4:
@@ -1446,6 +1584,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1406.821
       type: XCOR
   XCQT12:
@@ -1467,6 +1606,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1273.523
       type: XCOR
   XCQT22:
@@ -1488,6 +1628,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1309.334
       type: XCOR
   XCQT32:
@@ -1509,6 +1650,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1345.146
       type: XCOR
   XCQT42:
@@ -1530,6 +1672,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1381.021
       type: XCOR
   XCUM1:
@@ -1551,6 +1694,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1520.833
       type: XCOR
   XCUM3:
@@ -1572,6 +1716,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1536.115
       type: XCOR
   XCVB2:
@@ -1593,6 +1738,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1224.48
       type: XCOR
   XCVM2:
@@ -1614,6 +1760,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1210.808
       type: XCOR
   XCVM3:
@@ -1635,6 +1782,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1238.452
       type: XCOR
   YCDL1:
@@ -1656,6 +1804,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1257.058
       type: YCOR
   YCDL2:
@@ -1677,6 +1826,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1292.779
       type: YCOR
   YCDL3:
@@ -1698,6 +1848,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1328.44
       type: YCOR
   YCDL4:
@@ -1719,6 +1870,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1367.591
       type: YCOR
   YCE32:
@@ -1740,6 +1892,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1435.669
       type: YCOR
   YCE34:
@@ -1761,6 +1914,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1470.943
       type: YCOR
   YCE36:
@@ -1782,6 +1936,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1506.206
       type: YCOR
   YCEM1:
@@ -1803,6 +1958,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1385.569
       type: YCOR
   YCEM3:
@@ -1824,6 +1980,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1402.49
       type: YCOR
   YCQT12:
@@ -1845,6 +2002,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1274.964
       type: YCOR
   YCQT21:
@@ -1866,6 +2024,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1307.863
       type: YCOR
   YCQT32:
@@ -1887,6 +2046,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1346.597
       type: YCOR
   YCQT42:
@@ -1908,6 +2068,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1382.397
       type: YCOR
   YCUM2:
@@ -1929,6 +2090,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1527.664
       type: YCOR
   YCUM4:
@@ -1950,6 +2112,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1540.456
       type: YCOR
   YCVB1:
@@ -1971,6 +2134,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1221.28
       type: YCOR
   YCVB3:
@@ -1992,6 +2156,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1230.202
       type: YCOR
   YCVM1:
@@ -2013,6 +2178,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1209.757
       type: YCOR
   YCVM4:
@@ -2034,6 +2200,7 @@ magnets:
       - CU_HXTES
       - CU_SFTH
       - SC_HXR
+      l_eff: 0.0
       sum_l_meters: 1239.413
       type: YCOR
 screens:
@@ -2088,26 +2255,33 @@ wires:
   WS31:
     controls_information:
       PVs:
+        abort_scan: WIRE:LTUH:715:MOTR.STOP
         enabled: WIRE:LTUH:715:MOTR_ENABLED_STS
         homed: WIRE:LTUH:715:MOTR_HOMED_STS
         initialize: WIRE:LTUH:715:MOTR_INIT
-        initialized: WIRE:LTUH:715:MOTR_INIT_STS
-        motr: WIRE:LTUH:715:MOTR
+        initialize_status: WIRE:LTUH:715:MOTR_INIT_STS
+        motor: WIRE:LTUH:715:MOTR
+        position: WIRE:LTUH:715:MOTR.RBV
         retract: WIRE:LTUH:715:MOTR_RETRACT
-        startscan: WIRE:LTUH:715:STARTSCAN
+        scan_pulses: WIRE:LTUH:715:SCANPULSES
+        speed: WIRE:LTUH:715:MOTR.VELO
+        speed_max: WIRE:LTUH:715:MOTR.VMAX
+        speed_min: WIRE:LTUH:715:MOTR.VBAS
+        start_scan: WIRE:LTUH:715:STARTSCAN
+        temperature: WIRE:LTUH:715:TEMP
         timeout: WIRE:LTUH:715:MOTR_TIMEOUTEN
-        useuwire: WIRE:LTUH:715:USEUWIRE
-        usexwire: WIRE:LTUH:715:USEXWIRE
-        useywire: WIRE:LTUH:715:USEYWIRE
-        usize: WIRE:LTUH:715:UWIRESIZE
-        uwireinner: WIRE:LTUH:715:UWIREINNER
-        uwireouter: WIRE:LTUH:715:UWIREOUTER
-        xsize: WIRE:LTUH:715:XWIRESIZE
-        xwireinner: WIRE:LTUH:715:XWIREINNER
-        xwireouter: WIRE:LTUH:715:XWIREOUTER
-        ysize: WIRE:LTUH:715:YWIRESIZE
-        ywireinner: WIRE:LTUH:715:YWIREINNER
-        ywireouter: WIRE:LTUH:715:YWIREOUTER
+        u_size: WIRE:LTUH:715:UWIRESIZE
+        u_wire_inner: WIRE:LTUH:715:UWIREINNER
+        u_wire_outer: WIRE:LTUH:715:UWIREOUTER
+        use_u_wire: WIRE:LTUH:715:USEUWIRE
+        use_x_wire: WIRE:LTUH:715:USEXWIRE
+        use_y_wire: WIRE:LTUH:715:USEYWIRE
+        x_size: WIRE:LTUH:715:XWIRESIZE
+        x_wire_inner: WIRE:LTUH:715:XWIREINNER
+        x_wire_outer: WIRE:LTUH:715:XWIREOUTER
+        y_size: WIRE:LTUH:715:YWIRESIZE
+        y_wire_inner: WIRE:LTUH:715:YWIREINNER
+        y_wire_outer: WIRE:LTUH:715:YWIREOUTER
       control_name: WIRE:LTUH:715
     metadata:
       area: LTUH
@@ -2122,26 +2296,33 @@ wires:
   WS32:
     controls_information:
       PVs:
+        abort_scan: WIRE:LTUH:735:MOTR.STOP
         enabled: WIRE:LTUH:735:MOTR_ENABLED_STS
         homed: WIRE:LTUH:735:MOTR_HOMED_STS
         initialize: WIRE:LTUH:735:MOTR_INIT
-        initialized: WIRE:LTUH:735:MOTR_INIT_STS
-        motr: WIRE:LTUH:735:MOTR
+        initialize_status: WIRE:LTUH:735:MOTR_INIT_STS
+        motor: WIRE:LTUH:735:MOTR
+        position: WIRE:LTUH:735:MOTR.RBV
         retract: WIRE:LTUH:735:MOTR_RETRACT
-        startscan: WIRE:LTUH:735:STARTSCAN
+        scan_pulses: WIRE:LTUH:735:SCANPULSES
+        speed: WIRE:LTUH:735:MOTR.VELO
+        speed_max: WIRE:LTUH:735:MOTR.VMAX
+        speed_min: WIRE:LTUH:735:MOTR.VBAS
+        start_scan: WIRE:LTUH:735:STARTSCAN
+        temperature: WIRE:LTUH:735:TEMP
         timeout: WIRE:LTUH:735:MOTR_TIMEOUTEN
-        useuwire: WIRE:LTUH:735:USEUWIRE
-        usexwire: WIRE:LTUH:735:USEXWIRE
-        useywire: WIRE:LTUH:735:USEYWIRE
-        usize: WIRE:LTUH:735:UWIRESIZE
-        uwireinner: WIRE:LTUH:735:UWIREINNER
-        uwireouter: WIRE:LTUH:735:UWIREOUTER
-        xsize: WIRE:LTUH:735:XWIRESIZE
-        xwireinner: WIRE:LTUH:735:XWIREINNER
-        xwireouter: WIRE:LTUH:735:XWIREOUTER
-        ysize: WIRE:LTUH:735:YWIRESIZE
-        ywireinner: WIRE:LTUH:735:YWIREINNER
-        ywireouter: WIRE:LTUH:735:YWIREOUTER
+        u_size: WIRE:LTUH:735:UWIRESIZE
+        u_wire_inner: WIRE:LTUH:735:UWIREINNER
+        u_wire_outer: WIRE:LTUH:735:UWIREOUTER
+        use_u_wire: WIRE:LTUH:735:USEUWIRE
+        use_x_wire: WIRE:LTUH:735:USEXWIRE
+        use_y_wire: WIRE:LTUH:735:USEYWIRE
+        x_size: WIRE:LTUH:735:XWIRESIZE
+        x_wire_inner: WIRE:LTUH:735:XWIREINNER
+        x_wire_outer: WIRE:LTUH:735:XWIREOUTER
+        y_size: WIRE:LTUH:735:YWIRESIZE
+        y_wire_inner: WIRE:LTUH:735:YWIREINNER
+        y_wire_outer: WIRE:LTUH:735:YWIREOUTER
       control_name: WIRE:LTUH:735
     metadata:
       area: LTUH
@@ -2156,26 +2337,33 @@ wires:
   WS33:
     controls_information:
       PVs:
+        abort_scan: WIRE:LTUH:755:MOTR.STOP
         enabled: WIRE:LTUH:755:MOTR_ENABLED_STS
         homed: WIRE:LTUH:755:MOTR_HOMED_STS
         initialize: WIRE:LTUH:755:MOTR_INIT
-        initialized: WIRE:LTUH:755:MOTR_INIT_STS
-        motr: WIRE:LTUH:755:MOTR
+        initialize_status: WIRE:LTUH:755:MOTR_INIT_STS
+        motor: WIRE:LTUH:755:MOTR
+        position: WIRE:LTUH:755:MOTR.RBV
         retract: WIRE:LTUH:755:MOTR_RETRACT
-        startscan: WIRE:LTUH:755:STARTSCAN
+        scan_pulses: WIRE:LTUH:755:SCANPULSES
+        speed: WIRE:LTUH:755:MOTR.VELO
+        speed_max: WIRE:LTUH:755:MOTR.VMAX
+        speed_min: WIRE:LTUH:755:MOTR.VBAS
+        start_scan: WIRE:LTUH:755:STARTSCAN
+        temperature: WIRE:LTUH:755:TEMP
         timeout: WIRE:LTUH:755:MOTR_TIMEOUTEN
-        useuwire: WIRE:LTUH:755:USEUWIRE
-        usexwire: WIRE:LTUH:755:USEXWIRE
-        useywire: WIRE:LTUH:755:USEYWIRE
-        usize: WIRE:LTUH:755:UWIRESIZE
-        uwireinner: WIRE:LTUH:755:UWIREINNER
-        uwireouter: WIRE:LTUH:755:UWIREOUTER
-        xsize: WIRE:LTUH:755:XWIRESIZE
-        xwireinner: WIRE:LTUH:755:XWIREINNER
-        xwireouter: WIRE:LTUH:755:XWIREOUTER
-        ysize: WIRE:LTUH:755:YWIRESIZE
-        ywireinner: WIRE:LTUH:755:YWIREINNER
-        ywireouter: WIRE:LTUH:755:YWIREOUTER
+        u_size: WIRE:LTUH:755:UWIRESIZE
+        u_wire_inner: WIRE:LTUH:755:UWIREINNER
+        u_wire_outer: WIRE:LTUH:755:UWIREOUTER
+        use_u_wire: WIRE:LTUH:755:USEUWIRE
+        use_x_wire: WIRE:LTUH:755:USEXWIRE
+        use_y_wire: WIRE:LTUH:755:USEYWIRE
+        x_size: WIRE:LTUH:755:XWIRESIZE
+        x_wire_inner: WIRE:LTUH:755:XWIREINNER
+        x_wire_outer: WIRE:LTUH:755:XWIREOUTER
+        y_size: WIRE:LTUH:755:YWIRESIZE
+        y_wire_inner: WIRE:LTUH:755:YWIREINNER
+        y_wire_outer: WIRE:LTUH:755:YWIREOUTER
       control_name: WIRE:LTUH:755
     metadata:
       area: LTUH
@@ -2190,26 +2378,33 @@ wires:
   WS34:
     controls_information:
       PVs:
+        abort_scan: WIRE:LTUH:775:MOTR.STOP
         enabled: WIRE:LTUH:775:MOTR_ENABLED_STS
         homed: WIRE:LTUH:775:MOTR_HOMED_STS
         initialize: WIRE:LTUH:775:MOTR_INIT
-        initialized: WIRE:LTUH:775:MOTR_INIT_STS
-        motr: WIRE:LTUH:775:MOTR
+        initialize_status: WIRE:LTUH:775:MOTR_INIT_STS
+        motor: WIRE:LTUH:775:MOTR
+        position: WIRE:LTUH:775:MOTR.RBV
         retract: WIRE:LTUH:775:MOTR_RETRACT
-        startscan: WIRE:LTUH:775:STARTSCAN
+        scan_pulses: WIRE:LTUH:775:SCANPULSES
+        speed: WIRE:LTUH:775:MOTR.VELO
+        speed_max: WIRE:LTUH:775:MOTR.VMAX
+        speed_min: WIRE:LTUH:775:MOTR.VBAS
+        start_scan: WIRE:LTUH:775:STARTSCAN
+        temperature: WIRE:LTUH:775:TEMP
         timeout: WIRE:LTUH:775:MOTR_TIMEOUTEN
-        useuwire: WIRE:LTUH:775:USEUWIRE
-        usexwire: WIRE:LTUH:775:USEXWIRE
-        useywire: WIRE:LTUH:775:USEYWIRE
-        usize: WIRE:LTUH:775:UWIRESIZE
-        uwireinner: WIRE:LTUH:775:UWIREINNER
-        uwireouter: WIRE:LTUH:775:UWIREOUTER
-        xsize: WIRE:LTUH:775:XWIRESIZE
-        xwireinner: WIRE:LTUH:775:XWIREINNER
-        xwireouter: WIRE:LTUH:775:XWIREOUTER
-        ysize: WIRE:LTUH:775:YWIRESIZE
-        ywireinner: WIRE:LTUH:775:YWIREINNER
-        ywireouter: WIRE:LTUH:775:YWIREOUTER
+        u_size: WIRE:LTUH:775:UWIRESIZE
+        u_wire_inner: WIRE:LTUH:775:UWIREINNER
+        u_wire_outer: WIRE:LTUH:775:UWIREOUTER
+        use_u_wire: WIRE:LTUH:775:USEUWIRE
+        use_x_wire: WIRE:LTUH:775:USEXWIRE
+        use_y_wire: WIRE:LTUH:775:USEYWIRE
+        x_size: WIRE:LTUH:775:XWIRESIZE
+        x_wire_inner: WIRE:LTUH:775:XWIREINNER
+        x_wire_outer: WIRE:LTUH:775:XWIREOUTER
+        y_size: WIRE:LTUH:775:YWIRESIZE
+        y_wire_inner: WIRE:LTUH:775:YWIREINNER
+        y_wire_outer: WIRE:LTUH:775:YWIREOUTER
       control_name: WIRE:LTUH:775
     metadata:
       area: LTUH
@@ -2224,26 +2419,33 @@ wires:
   WSDL31:
     controls_information:
       PVs:
+        abort_scan: WIRE:LTUH:246:MOTR.STOP
         enabled: WIRE:LTUH:246:MOTR_ENABLED_STS
         homed: WIRE:LTUH:246:MOTR_HOMED_STS
         initialize: WIRE:LTUH:246:MOTR_INIT
-        initialized: WIRE:LTUH:246:MOTR_INIT_STS
-        motr: WIRE:LTUH:246:MOTR
+        initialize_status: WIRE:LTUH:246:MOTR_INIT_STS
+        motor: WIRE:LTUH:246:MOTR
+        position: WIRE:LTUH:246:MOTR.RBV
         retract: WIRE:LTUH:246:MOTR_RETRACT
-        startscan: WIRE:LTUH:246:STARTSCAN
+        scan_pulses: WIRE:LTUH:246:SCANPULSES
+        speed: WIRE:LTUH:246:MOTR.VELO
+        speed_max: WIRE:LTUH:246:MOTR.VMAX
+        speed_min: WIRE:LTUH:246:MOTR.VBAS
+        start_scan: WIRE:LTUH:246:STARTSCAN
+        temperature: WIRE:LTUH:246:TEMP
         timeout: WIRE:LTUH:246:MOTR_TIMEOUTEN
-        useuwire: WIRE:LTUH:246:USEUWIRE
-        usexwire: WIRE:LTUH:246:USEXWIRE
-        useywire: WIRE:LTUH:246:USEYWIRE
-        usize: WIRE:LTUH:246:UWIRESIZE
-        uwireinner: WIRE:LTUH:246:UWIREINNER
-        uwireouter: WIRE:LTUH:246:UWIREOUTER
-        xsize: WIRE:LTUH:246:XWIRESIZE
-        xwireinner: WIRE:LTUH:246:XWIREINNER
-        xwireouter: WIRE:LTUH:246:XWIREOUTER
-        ysize: WIRE:LTUH:246:YWIRESIZE
-        ywireinner: WIRE:LTUH:246:YWIREINNER
-        ywireouter: WIRE:LTUH:246:YWIREOUTER
+        u_size: WIRE:LTUH:246:UWIRESIZE
+        u_wire_inner: WIRE:LTUH:246:UWIREINNER
+        u_wire_outer: WIRE:LTUH:246:UWIREOUTER
+        use_u_wire: WIRE:LTUH:246:USEUWIRE
+        use_x_wire: WIRE:LTUH:246:USEXWIRE
+        use_y_wire: WIRE:LTUH:246:USEYWIRE
+        x_size: WIRE:LTUH:246:XWIRESIZE
+        x_wire_inner: WIRE:LTUH:246:XWIREINNER
+        x_wire_outer: WIRE:LTUH:246:XWIREOUTER
+        y_size: WIRE:LTUH:246:YWIRESIZE
+        y_wire_inner: WIRE:LTUH:246:YWIREINNER
+        y_wire_outer: WIRE:LTUH:246:YWIREOUTER
       control_name: WIRE:LTUH:246
     metadata:
       area: LTUH
@@ -2258,20 +2460,26 @@ wires:
   WSDL4:
     controls_information:
       PVs:
-        motr: WIRE:LTUH:538:MOTR
-        startscan: WIRE:LTUH:538:STARTSCAN
-        useuwire: WIRE:LTUH:538:USEUWIRE
-        usexwire: WIRE:LTUH:538:USEXWIRE
-        useywire: WIRE:LTUH:538:USEYWIRE
-        usize: WIRE:LTUH:538:UWIRESIZE
-        uwireinner: WIRE:LTUH:538:UWIREINNER
-        uwireouter: WIRE:LTUH:538:UWIREOUTER
-        xsize: WIRE:LTUH:538:XWIRESIZE
-        xwireinner: WIRE:LTUH:538:XWIREINNER
-        xwireouter: WIRE:LTUH:538:XWIREOUTER
-        ysize: WIRE:LTUH:538:YWIRESIZE
-        ywireinner: WIRE:LTUH:538:YWIREINNER
-        ywireouter: WIRE:LTUH:538:YWIREOUTER
+        abort_scan: WIRE:LTUH:538:MOTR.STOP
+        motor: WIRE:LTUH:538:MOTR
+        position: WIRE:LTUH:538:MOTR.RBV
+        scan_pulses: WIRE:LTUH:538:SCANPULSES
+        speed: WIRE:LTUH:538:MOTR.VELO
+        speed_max: WIRE:LTUH:538:MOTR.VMAX
+        speed_min: WIRE:LTUH:538:MOTR.VBAS
+        start_scan: WIRE:LTUH:538:STARTSCAN
+        u_size: WIRE:LTUH:538:UWIRESIZE
+        u_wire_inner: WIRE:LTUH:538:UWIREINNER
+        u_wire_outer: WIRE:LTUH:538:UWIREOUTER
+        use_u_wire: WIRE:LTUH:538:USEUWIRE
+        use_x_wire: WIRE:LTUH:538:USEXWIRE
+        use_y_wire: WIRE:LTUH:538:USEYWIRE
+        x_size: WIRE:LTUH:538:XWIRESIZE
+        x_wire_inner: WIRE:LTUH:538:XWIREINNER
+        x_wire_outer: WIRE:LTUH:538:XWIREOUTER
+        y_size: WIRE:LTUH:538:YWIRESIZE
+        y_wire_inner: WIRE:LTUH:538:YWIREINNER
+        y_wire_outer: WIRE:LTUH:538:YWIREOUTER
       control_name: WIRE:LTUH:538
     metadata:
       area: LTUH
@@ -2286,26 +2494,33 @@ wires:
   WSVM2:
     controls_information:
       PVs:
+        abort_scan: WIRE:LTUH:122:MOTR.STOP
         enabled: WIRE:LTUH:122:MOTR_ENABLED_STS
         homed: WIRE:LTUH:122:MOTR_HOMED_STS
         initialize: WIRE:LTUH:122:MOTR_INIT
-        initialized: WIRE:LTUH:122:MOTR_INIT_STS
-        motr: WIRE:LTUH:122:MOTR
+        initialize_status: WIRE:LTUH:122:MOTR_INIT_STS
+        motor: WIRE:LTUH:122:MOTR
+        position: WIRE:LTUH:122:MOTR.RBV
         retract: WIRE:LTUH:122:MOTR_RETRACT
-        startscan: WIRE:LTUH:122:STARTSCAN
+        scan_pulses: WIRE:LTUH:122:SCANPULSES
+        speed: WIRE:LTUH:122:MOTR.VELO
+        speed_max: WIRE:LTUH:122:MOTR.VMAX
+        speed_min: WIRE:LTUH:122:MOTR.VBAS
+        start_scan: WIRE:LTUH:122:STARTSCAN
+        temperature: WIRE:LTUH:122:TEMP
         timeout: WIRE:LTUH:122:MOTR_TIMEOUTEN
-        useuwire: WIRE:LTUH:122:USEUWIRE
-        usexwire: WIRE:LTUH:122:USEXWIRE
-        useywire: WIRE:LTUH:122:USEYWIRE
-        usize: WIRE:LTUH:122:UWIRESIZE
-        uwireinner: WIRE:LTUH:122:UWIREINNER
-        uwireouter: WIRE:LTUH:122:UWIREOUTER
-        xsize: WIRE:LTUH:122:XWIRESIZE
-        xwireinner: WIRE:LTUH:122:XWIREINNER
-        xwireouter: WIRE:LTUH:122:XWIREOUTER
-        ysize: WIRE:LTUH:122:YWIRESIZE
-        ywireinner: WIRE:LTUH:122:YWIREINNER
-        ywireouter: WIRE:LTUH:122:YWIREOUTER
+        u_size: WIRE:LTUH:122:UWIRESIZE
+        u_wire_inner: WIRE:LTUH:122:UWIREINNER
+        u_wire_outer: WIRE:LTUH:122:UWIREOUTER
+        use_u_wire: WIRE:LTUH:122:USEUWIRE
+        use_x_wire: WIRE:LTUH:122:USEXWIRE
+        use_y_wire: WIRE:LTUH:122:USEYWIRE
+        x_size: WIRE:LTUH:122:XWIRESIZE
+        x_wire_inner: WIRE:LTUH:122:XWIREINNER
+        x_wire_outer: WIRE:LTUH:122:XWIREOUTER
+        y_size: WIRE:LTUH:122:YWIRESIZE
+        y_wire_inner: WIRE:LTUH:122:YWIREINNER
+        y_wire_outer: WIRE:LTUH:122:YWIREOUTER
       control_name: WIRE:LTUH:122
     metadata:
       area: LTUH

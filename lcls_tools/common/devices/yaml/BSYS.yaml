@@ -1,3 +1,13 @@
+lblms:
+  LBLMS24A:
+    controls_information:
+      PVs: {}
+      control_name: LBLM:BSYS:247:A
+    metadata:
+      area: BSYS
+      beam_path: []
+      sum_l_meters: null
+      type: LBLM
 magnets:
   QBP33:
     controls_information:
@@ -19,6 +29,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.124
       sum_l_meters: 3197.224
       type: QUAD
   QBP34:
@@ -41,6 +52,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.124
       sum_l_meters: 3207.253
       type: QUAD
   XCBP33:
@@ -63,6 +75,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.0
       sum_l_meters: 3198.489
       type: XCOR
   XCBP34:
@@ -85,6 +98,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.0
       sum_l_meters: 3208.519
       type: XCOR
   YCBP33:
@@ -107,6 +121,7 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.0
       sum_l_meters: 3198.769
       type: YCOR
   YCBP34:
@@ -129,5 +144,6 @@ magnets:
       - SC_STMO
       - SC_STXI
       - SC_SXR
+      l_eff: 0.0
       sum_l_meters: 3208.798
       type: YCOR

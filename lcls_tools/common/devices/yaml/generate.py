@@ -7,11 +7,13 @@ from lcls_tools.common.devices.yaml.metadata import (
     get_magnet_metadata,
     get_screen_metadata,
     get_wire_metadata,
+    get_lblm_metadata,
 )
 from lcls_tools.common.devices.yaml.controls_information import (
     get_magnet_controls_information,
     get_screen_controls_information,
     get_wire_controls_information,
+    get_lblm_controls_information,
 )
 
 
@@ -134,6 +136,9 @@ class YAMLGenerator:
         # Use the control system name to get all PVs associated with device
         pv_dict = {}
         for search_term, handle in search_with_handles.items():
+            field = str()
+            if "." in search_term:
+                search_term, field = search_term.split(".")
             # End of the PV name is implied in search_term
             try:
                 pv_list = meme.names.list_pvs(name + ":" + search_term, sort_by="z")
@@ -141,7 +146,7 @@ class YAMLGenerator:
                 if pv_list != list():
                     if len(pv_list) == 1:
                         # get the pv out of the results
-                        pv = pv_list[0]
+                        pv = f"{pv_list[0]}.{field}" if field else pv_list[0]
                         if not handle:
                             # if the user has not provided their own handle then
                             # split by colon, grab the last part of the string as a handle
@@ -271,20 +276,26 @@ class YAMLGenerator:
             "BMAX": None,
         }
         # should be structured {MAD-NAME : {field_name : value, field_name_2 : value}, ... }
-        additional_metadata_data = get_magnet_metadata()
-        # should be structured {MAD-NAME : {field_name : value, field_name_2 : value}, ... }
-        additional_controls_data = get_magnet_controls_information()
+
         basic_magnet_data = self.extract_devices(
             area=area,
             required_types=required_magnet_types,
             pv_search_terms=possible_magnet_pvs,
         )
+
         if basic_magnet_data:
+
+            magnet_names = [key for key in basic_magnet_data.keys()]
+            additional_metadata_data = get_magnet_metadata(magnet_names, self.extract_metadata_by_device_names)
+            # should be structured {MAD-NAME : {field_name : value, field_name_2 : value}, ... }
+            additional_controls_data = get_magnet_controls_information()
+
             complete_magnet_data = self.add_extra_data_to_device(
                 device_data=basic_magnet_data,
                 additional_controls_information=additional_controls_data,
                 additional_metadata=additional_metadata_data,
             )
+
             return complete_magnet_data
         else:
             return {}
@@ -327,28 +338,35 @@ class YAMLGenerator:
         # PV suffix as the key, the name we want to store it as in yaml file as the value
         # None implies that we are happen using the PV suffix (lowercase) as the name in yaml
         possible_wire_pvs = {
-            "MOTR": "motr",
-            # "MOTR.VELO": "velo",
-            # "MOTR.RBV": "rbv",
-            "MOTR_INIT": "initialize",
-            "MOTR_INIT_STS": "initialized",
-            "MOTR_RETRACT": "retract",
-            "STARTSCAN": "startscan",
-            "XWIRESIZE": "xsize",
-            "YWIRESIZE": "ysize",
-            "UWIRESIZE": "usize",
-            "USEXWIRE": "usexwire",
-            "USEYWIRE": "useywire",
-            "USEUWIRE": "useuwire",
-            "XWIREINNER": "xwireinner",
-            "XWIREOUTER": "xwireouter",
-            "YWIREINNER": "ywireinner",
-            "YWIREOUTER": "ywireouter",
-            "UWIREINNER": "uwireinner",
-            "UWIREOUTER": "uwireouter",
+            "MOTR.STOP": "abort_scan",
             "MOTR_ENABLED_STS": "enabled",
             "MOTR_HOMED_STS": "homed",
+            "MOTR_INIT": "initialize",
+            "MOTR_INIT_STS": "initialize_status",
+            "MOTR": "motor",
+            "MOTR.RBV": "position",
+            "MOTR_RETRACT": "retract",
+            "SCANPULSES": "scan_pulses",
+            "MOTR.VELO": "speed",
+            "MOTR.VMAX": "speed_max",
+            "MOTR.VBAS": "speed_min",
+            "STARTSCAN": "start_scan",
+            "TEMP": "temperature",
             "MOTR_TIMEOUTEN": "timeout",
+            "USEUWIRE": "use_u_wire",
+            "USEXWIRE": "use_x_wire",
+            "USEYWIRE": "use_y_wire",
+            "UWIRESIZE": "u_size",
+            "UWIREINNER": "u_wire_inner",
+            "UWIREOUTER": "u_wire_outer",
+            "MOTR.VMAX": "speed_max",
+            "MOTR.VBAS": "speed_min",
+            "XWIRESIZE": "x_size",
+            "XWIREINNER": "x_wire_inner",
+            "XWIREOUTER": "x_wire_outer",
+            "YWIRESIZE": "y_size",
+            "YWIREINNER": "y_wire_inner",
+            "YWIREOUTER": "y_wire_outer",
         }
         # should be structured {MAD-NAME : {field_name : value, field_name_2 : value}, ... }
         additional_metadata_data = get_wire_metadata()
@@ -368,3 +386,59 @@ class YAMLGenerator:
             return complete_wire_data
         else:
             return {}
+
+    def extract_lblms(self, area: Union[str, List[str]] = ["HTR"]):
+        required_lblm_types = ["LBLM"]
+        # PV suffix as the key, the name we want to store it as in yaml file as the value
+        # None implies that we are happen using the PV suffix (lowercase) as the name in yaml
+        possible_lblm_pvs = {
+            "GATED_INTEGRAL": "gated_integral",
+            "I0_LOSS": "i0_loss",
+            "FAST_AMP_GAIN": "gain",
+            "FAST_AMP_BYP": "bypass",
+        }
+        # should be structured {MAD-NAME : {field_name : value, field_name_2 : value}, ... }
+        additional_metadata_data = get_lblm_metadata()
+        # should be structured {MAD-NAME : {field_name : value, field_name_2 : value}, ... }
+        additional_controls_data = get_lblm_controls_information()
+        basic_lblm_data = self.extract_devices(
+            area=area,
+            required_types=required_lblm_types,
+            pv_search_terms=possible_lblm_pvs,
+        )
+        if basic_lblm_data:
+            complete_lblm_data = self.add_extra_data_to_device(
+                device_data=basic_lblm_data,
+                additional_controls_information=additional_controls_data,
+                additional_metadata=additional_metadata_data,
+            )
+            return complete_lblm_data
+        else:
+            return {}
+
+    def extract_metadata_by_device_names(
+        self,
+        device_names=Optional[List[str]],
+        required_fields=Optional[List[str]]
+    ):
+        # TODO: try not to call filter elements so many times as it parses csv
+        if required_fields:
+            elements = self._filter_elements_by_fields(
+                required_fields=required_fields
+            )
+        else:
+            elements = self._filter_elements_by_fields(
+                required_fields=self._required_fields
+            )
+
+        device_elements = {
+            element["Element"]: {
+                required_field: element[required_field]
+                for required_field in required_fields
+                if "Element" not in required_field
+            }
+            for element in elements
+            if element["Element"] in device_names
+        }
+
+        return device_elements
